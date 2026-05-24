@@ -1,34 +1,32 @@
-# Starship prompt config
 add_newline = true
-command_timeout = 500
+command_timeout = 200
+format = "[$directory$git_branch$git_status]($style)$character"
 
 [character]
-success_symbol = "[❯](green)"
-error_symbol = "[❯](red)"
+error_symbol = "[✗](bold cyan)"
+success_symbol = "[❯](bold cyan)"
+
+[directory]
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_style = "bold cyan"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-format = "on [$symbol$branch](bold purple) "
-truncation_length = 20
+format = "[$branch]($style) "
+style = "italic cyan"
 
-[nodejs]
-format = "via [$symbol$version](bold green) "
-
-[python]
-format = "via [$symbol$version](bold yellow) "
-
-[golang]
-format = "via [$symbol$version](bold cyan) "
-
-[kubernetes]
-format = "on [$symbol$context ($namespace)](bold red) "
-disabled = false
-
-[docker_context]
-format = "via [$symbol$context](bold blue) "
-
-[cmd_duration]
-format = "took [$duration](bold yellow) "
-min_time = 2000
-
-[aws]
-format = "on [$symbol$profile($region ($duration))]($style) "
+[git_status]
+format     = '[$all_status]($style)'
+style      = "cyan"
+ahead      = "⇡${count} "
+diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+behind     = "⇣${count} "
+conflicted = " "
+up_to_date = " "
+untracked  = "? "
+modified   = " "
+stashed    = ""
+staged     = ""
+renamed    = ""
+deleted    = ""
