@@ -70,11 +70,6 @@ alias kgn='kubectl get nodes'
 # Tmux
 alias t='tmux new-session -A -s main'
 
-# Starship prompt
-if command -v starship &>/dev/null; then
-  eval "$(starship init bash)"
-fi
-
 # Navigation
 alias dotfiles='cd ~/dotfiles'
 

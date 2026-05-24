@@ -30,14 +30,6 @@ fi
 ln -sfn "$DOTFILES/config/nvim" "$HOME/.config/nvim"
 echo "  linked config/nvim"
 
-# starship.toml → ~/.config/starship.toml
-mkdir -p "$HOME/.config"
-if [ -f "$HOME/.config/starship.toml" ] && [ ! -L "$HOME/.config/starship.toml" ]; then
-  cp "$HOME/.config/starship.toml" "$HOME/.config/starship.toml.bak" 2>/dev/null || true
-fi
-ln -sf "$DOTFILES/config/starship.toml" "$HOME/.config/starship.toml"
-echo "  linked config/starship.toml"
-
 echo ""
 echo "✓ Done. Restart shell or: source ~/.bashrc"
 echo "  Missing tools: sudo apt install fd-find bat btop"
