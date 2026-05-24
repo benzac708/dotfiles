@@ -1,0 +1,34 @@
+# Starship prompt config
+add_newline = true
+command_timeout = 500
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+
+[git_branch]
+format = "on [$symbol$branch](bold purple) "
+truncation_length = 20
+
+[nodejs]
+format = "via [$symbol$version](bold green) "
+
+[python]
+format = "via [$symbol$version](bold yellow) "
+
+[golang]
+format = "via [$symbol$version](bold cyan) "
+
+[kubernetes]
+format = "on [$symbol$context \($namespace\)](bold red) "
+disabled = false
+
+[docker_context]
+format = "via [$symbol$context](bold blue) "
+
+[cmd_duration]
+format = "took [$duration](bold yellow) "
+min_time = 2000
+
+[aws]
+format = "on [$symbol$profile($region \($duration\))]($style) "
