@@ -11,6 +11,19 @@ shopt -s histappend checkwinsize
 # PATH
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
+# Mise (tool version manager)
+export PATH="$HOME/.local/share/mise/shims:$PATH"
+
+# Bun (PAI runtime)
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# Panda (PAI assistant)
+alias pai='bun /home/ubuntu/.claude/PAI/TOOLS/pai.ts'
+
 # Editor
 export EDITOR=nvim
 export VISUAL=nvim
