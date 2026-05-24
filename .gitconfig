@@ -1,0 +1,24 @@
+[user]
+  email = berzac408@gmail.com
+  name = Ben Zac
+[init]
+  defaultBranch = main
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+[pull]
+  rebase = true
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  ci = commit
+  cp = cherry-pick
+  df = diff
+  lg = log --oneline --graph --decorate --all
+  ls = ls-files
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  amend = commit --amend --no-edit
+  graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  who = shortlog -s --
