@@ -20,7 +20,7 @@ format = "via [$symbol$version](bold yellow) "
 format = "via [$symbol$version](bold cyan) "
 
 [kubernetes]
-format = "on [$symbol$context \($namespace\)](bold red) "
+format = "on [$symbol$context ($namespace)](bold red) "
 disabled = false
 
 [docker_context]
@@ -31,4 +31,4 @@ format = "took [$duration](bold yellow) "
 min_time = 2000
 
 [aws]
-format = "on [$symbol$profile($region \($duration\))]($style) "
+format = "on [$symbol$profile($region ($duration))]($style) "
